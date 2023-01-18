@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MagazinGsm.ListClient"
+             Title="ListClient">
+    <StackLayout Margin="20">
+        <Editor TextColor="Black" PlaceholderColor="Black" Placeholder="Introduceti numele" Text="{Binding Nume}" HeightRequest="100"/>
+        <Editor TextColor="Black" PlaceholderColor="Black" Placeholder="Introduceti prenumele" Text="{Binding Prenume}" HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Salvare" BackgroundColor="#FFCAB0" TextColor="Black" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" BackgroundColor="#ffcab0" TextColor="Black" Text="Stergeti client" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

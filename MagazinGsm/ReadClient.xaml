@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MagazinGsm.ReadClient"
+             Title="ReadClient">
+    <StackLayout Margin="20">
+        <Button BackgroundColor="#B0BBFF" TextColor="Black" Text="Adaugare client" Clicked="OnClientAddedClicked" />
+        <Button BackgroundColor="#B0C7FF" TextColor="Black" Text="Vizualizare clienti" Clicked="OnClientAddedView" />
+        <ListView x:Name="listView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HasUnevenRows="true" ItemSelected="OnListViewItemSelected" >
+        <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout >
+                            <Label TextColor="Black" BackgroundColor="#ffcab0" Text="{Binding ID}"/>
+                            <Label TextColor="Black" Text="{Binding Nume}"/>
+                            <Label TextColor="Black" Text="{Binding Prenume}"/>
+                            <Label TextColor="Black" Text="{Binding NumarTelefon }"/>
+                            <Label TextColor="Black" Text="{Binding Adresa}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
